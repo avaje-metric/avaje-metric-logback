@@ -2,7 +2,6 @@ package org.avaje.metric.logback;
 
 import org.avaje.metric.CounterMetric;
 import org.avaje.metric.MetricManager;
-import org.avaje.metric.MetricName;
 
 import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.spi.ILoggingEvent;
@@ -27,14 +26,9 @@ public final class LogMetricAppender extends AppenderBase<ILoggingEvent> {
    */
   public LogMetricAppender() {
 
-    MetricName errorName = new MetricName("app", "log","error");
-    errorMetric = MetricManager.getCounterMetric(errorName);
-
-    MetricName warnName = new MetricName("app", "log", "warn");
-    warnMetric = MetricManager.getCounterMetric(warnName);
-    
-    MetricName infoName = new MetricName("app", "log", "info");
-    infoMetric = MetricManager.getCounterMetric(infoName);
+    errorMetric = MetricManager.getCounterMetric(MetricManager.nameParse("app.log.error"));
+    warnMetric = MetricManager.getCounterMetric(MetricManager.nameParse("app.log.warn"));
+    infoMetric = MetricManager.getCounterMetric(MetricManager.nameParse("app.log.info"));
   }
 
   /**
