@@ -26,9 +26,9 @@ public final class LogMetricAppender extends AppenderBase<ILoggingEvent> {
    */
   public LogMetricAppender() {
 
-    errorMetric = MetricManager.getCounterMetric(MetricManager.nameParse("app.log.error"));
-    warnMetric = MetricManager.getCounterMetric(MetricManager.nameParse("app.log.warn"));
-    infoMetric = MetricManager.getCounterMetric(MetricManager.nameParse("app.log.info"));
+    errorMetric = MetricManager.getCounterMetric("app.log.error");
+    warnMetric = MetricManager.getCounterMetric("app.log.warn");
+    infoMetric = MetricManager.getCounterMetric("app.log.info");
   }
 
   /**
