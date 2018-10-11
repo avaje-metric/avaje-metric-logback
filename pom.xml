@@ -9,7 +9,7 @@
 
   <groupId>org.avaje.metric</groupId>
   <artifactId>metric-logback</artifactId>
-  <version>7.2.1</version>
+  <version>7.2.2-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>metric-logback</name>
@@ -38,7 +38,7 @@
 
   <scm>
     <developerConnection>scm:git:git@github.com:avaje-metric/metric-logback.git</developerConnection>
-    <tag>metric-logback-7.2.1</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <dependencies>
