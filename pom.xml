@@ -1,19 +1,20 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
     <groupId>org.avaje</groupId>
-    <artifactId>avaje-parent</artifactId>
-    <version>2.0</version>
+    <artifactId>java8-parent</artifactId>
+    <version>1.3</version>
   </parent>
 
   <groupId>org.avaje.metric</groupId>
-  <artifactId>avaje-metric-logback</artifactId>
-  <version>3.3.0-SNAPSHOT</version>
+  <artifactId>metric-logback</artifactId>
+  <version>7.2.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>avaje-metric-logback</name>
-  <url>http://www.avaje.org</url>
+  <name>metric-logback</name>
+  <url>https://avaje-metric.github.io</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -27,31 +28,31 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
-  
+
   <developers>
     <developer>
-    <id>rbygrave</id>
-    <name>Rob Bygrave</name>
-    <email>robin.bygrave@gmail.com</email>
+      <id>rbygrave</id>
+      <name>Rob Bygrave</name>
+      <email>robin.bygrave@gmail.com</email>
     </developer>
   </developers>
 
   <scm>
-    <connection>scm:git:https://github.com/rbygrave/avaje-metric-logback.git</connection>
-    <developerConnection>scm:git:https://github.com/rbygrave/avaje-metric-logback.git</developerConnection>
-    <url>https://github.com/rbygrave/avaje-metric-logback.git</url>
+    <developerConnection>scm:git:git@github.com:avaje-metric/metric-logback.git</developerConnection>
+    <tag>HEAD</tag>
   </scm>
 
   <dependencies>
-  
+
     <dependency>
       <groupId>org.avaje.metric</groupId>
-      <artifactId>avaje-metric-core</artifactId>
-      <version>(3.2,4)</version>
+      <artifactId>metric-core</artifactId>
+      <version>7.2.1</version>
+      <scope>provided</scope>
     </dependency>
-    
+
     <!-- Logback as scope Provided -->
-    
+
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-core</artifactId>
@@ -65,12 +66,14 @@
       <version>${logback.version}</version>
       <scope>provided</scope>
     </dependency>
-    
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+
   </dependencies>
+
 </project>
